@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>AtividadeIf</title>
+    <style>
+        body{
+            text-align: center;
+            color: whitesmoke;
+            background-color: rgb(26, 24, 24);
+            font-size: 20pt;
+            padding: 5% 20%;        
+        }
+        footer {
+            font: 30pt;
+            background-color: rgb(77, 8, 8);
+            color: whitesmoke;
+            position: absolute; left: 70%; top: 60%;
+        }
+
+        .inv{
+            display: none;
+        }
+
+
+   
+
+    </style>
+</head>
+<body>
+   
+    <div id="res">
+        <h1>Sistema de Multas</h1>
+        Velocidade do Carro: <input type="number" name="txtvel" id="txtvel"> km/h 
+        <input type="button" value="verificar" onclick="calcular()">
+    
+    
+<footer>
+    <img src="cttu.jpg" alt="Nao Esqueceremos">
+
+</footer>
+
+    
+</body>
+
+<script>
+
+
+    function calcular() {
+        var txtvel = window.document.querySelector('input#txtvel')
+        var res = window.document.querySelector('div#res')
+        var vel = Number(txtvel.value)
+       
+    
+        res.innerHTML = `<p>Sua velocidade atual e de <strong> ${vel} km/h</p>`
+            if(vel > 100) {
+                res.innerHTML += `<p>vocë esta <strong>multado</strong> por excesso de velocidade </p>`
+
+                
+            }
+            res.innerHTML += `<p>Dirija sempre com o cinto de seguranca</p>`
+
+            
+    }
+</script>
+</html>
